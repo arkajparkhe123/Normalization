@@ -23,4 +23,10 @@ heat=function(x){
   }
 
 heat(x)
+pdf('data.pdf',width = 10,height = 10)
+
+plot(1:5,pch=20)
+
+dev.off()
+
 
