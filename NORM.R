@@ -9,7 +9,7 @@ for(i in 1:ncol(data)){
 #Calculate the log value of cpm 
 logcpm=log2(cpm+1)
 logcpm
-saveRDS(logcpm,file="logCPM.rds")
+saveRDS(logcpm,file="logCPM.rds") #Save the log value in the form of RDS file
 summary(logcpm)
 
 
