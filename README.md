@@ -1,3 +1,4 @@
+Normalization:
 data file = https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE202650
 cancer type = "prostate cancer"
 steps:
@@ -8,6 +9,8 @@ steps:
 5. Then Counted cpm value
 6. Also Counted z score
 7. Then I have drawn a heat map of zscore value 
+
+
     
     
     
