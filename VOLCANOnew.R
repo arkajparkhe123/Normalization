@@ -5,7 +5,6 @@ head(logcpm)
 dim(logcpm)
 mat=matrix(NA,ncol=9,nrow = nrow(logcpm)) #Create a matrix of the logcpm
 rownames(mat)=rownames(logcpm)  #Set Gene id as the Rownames of empty matrix
-colnames(mat)=c('meanTumor','meanControl','pvalue','log2FC') #Create 4 columns in the mat variable
 
 #Add the Tumor and Control in the empty matrix
 for(i in 1:nrow(logcpm)){
@@ -21,11 +20,15 @@ for(i in 1:nrow(logcpm)){
   
 }
 head(mat) 
+mat=mat[,1:4] #Remove NA columns 
+colnames(mat)=c('meanTumor','meanControl','pvalue','log2FC') #Create the column names for the matrix
 
 head(mat)
 mat=as.data.frame(mat) #convert the matrix to dataframe
-num=which(is.nan(mat$pvlue)) 
-mat[num,'pvlue']=1 #Convert nan to 1
+num=which(is.nan(mat$pvalue)) 
+mat[num,'pvalue']=1 #Convert nan to 1
 head(mat)
 library(EnhancedVolcano) #Plot the Volcano plot using EnhancedVolcano
-EnhancedVolcano(mat,lab = rownames(mat),x = 'log2FC' ,y ='pvlue')
+EnhancedVolcano(mat,lab = rownames(mat),x = 'log2FC' ,y ='pvalue')
+
+saveRDS(mat,file = 'DEG.rds') #Save the dataframe in RDS format
