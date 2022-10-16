@@ -20,6 +20,17 @@ HeatMapVisualization:
  
  DEG(Differential Gene Expression):
  
- 1. Before proceeding for gene expression we have to take a basic assumption 
+ 1. Before proceeding for gene expression we have to take a basic assumption we split log2CPM matrix into two classes  based on sample size and consider first 7 samples are tumor class and rest samples as control class.
+ 
+ The objective of this hypothesis is to identify genes which are differential in tumor vs control samples.
+ 
+ 2. To identify  DEG, perform t.test using vec1 amd vec2
+ 
+    A t-test is a statistical test that is used to compare the means of two groups. It is often used in hypothesis testing to determine whether a process or treatment has an effect on the population of interest, or whether two groups are different from one another.
+    
+  3.calculate log2FC: log2FC = mean(vec1) - mean(vec2)
+  
+  
+  
 Name: Arkaj Parkhe
 Msc.bioinformatics(2nd year)
