@@ -11,9 +11,15 @@ steps:
 6. Also Counted z score
 7. Then I have drawn a heat map of zscore value 
 
-
-    
-    
-    
+HeatMapVisualization:
+ We have logCPM value which is obtained from the normalization function.
+ 
+ Now we can proceed for ZScore calculation 
+ 
+ And we calculated variance of  z score , get top 50 variance values based on it’s descending order and then use the new variance values to print a heatmap
+ 
+ DEG(Differential Gene Expression):
+ 
+ 1. Before proceeding for gene expression we have to take a basic assumption 
 Name: Arkaj Parkhe
 Msc.bioinformatics(2nd year)
