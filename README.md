@@ -30,6 +30,10 @@ HeatMapVisualization:
     
   3.calculate log2FC: log2FC = mean(vec1) - mean(vec2)
   
+  4.Volcano plot: Volcano plot shows upregulated and downregulated genes. red color is for upregulated and green color is for downregulated.
+  
+    The horizontal axis represents the fold change between control and tumor class and the vertical axis represents the P value of t test for the differences between       control and tumor.
+  
   
   
 Name: Arkaj Parkhe
