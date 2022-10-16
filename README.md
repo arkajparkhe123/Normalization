@@ -2,6 +2,7 @@ Normalization:
 
 data file = https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE202650
 cancer type = "prostate cancer"
+
 steps:
 1. I have downloaded the file GSE202650_readcounts_all.csx.gz from above file link.
 2. The file column contains readcounts per gene from 12 sample patients
