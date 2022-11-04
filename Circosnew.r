@@ -93,11 +93,3 @@ data = data[,c('chromosome_name', 'start_position',
 RCircos.Heatmap.Plot(data, data.col = 7, track.num =  6, side = "in",
                      min.value = -0.3, max.value = 1.8, genomic.columns = 3,
                      is.sorted = F)
-
-RC.param = RCircos.Get.Plot.Parameters()
-RC.param['heatmap.color'] = "GreenWhiteRed"
-RCircos.Reset.Plot.Parameters(RC.param)
-
-RCircos.Heatmap.Plot(data, data.col = 7, track.num = 10, side = "in",
-                     min.value = -2, max.value = 2,
-                     is.sorted = F)
